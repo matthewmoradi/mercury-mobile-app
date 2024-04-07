@@ -1,0 +1,8 @@
+video {
+    width: 40%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 5px;
+    transform: scaleX(-1);
+}

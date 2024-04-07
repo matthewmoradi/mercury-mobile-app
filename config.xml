@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mercury.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>mercury mobile app</name>
+    <description>Mercury messanger app</description>
+    <author email="dev@app.mercury.com" href="https://app.mercury.com">
+        Mercury Team
+    </author>
+    <content src="http://localhost/index.html" />
+    <access origin="*" />
+    <preference name="android-targetSdkVersion" value="30" android:exported="true"  />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <edit-config 
+            xmlns:android="http://schemas.android.com/apk/res/android" 
+            file="app/src/main/AndroidManifest.xml" 
+            mode="merge" 
+            target="/manifest/application"> 
+            <application android:usesCleartextTraffic="true" /> 
+        </edit-config>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.RECORD_AUDIO" />
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+            <uses-feature android:name="android.hardware.camera" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+            <uses-permission android:name="android.permission.INTERNET" />
+        </config-file>
+        <preference name="AndroidLaunchMode" value="singleInstance" />
+    </platform>
+    <allow-intent href="*://*/*" />
+    <allow-intent href="file://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+</widget>

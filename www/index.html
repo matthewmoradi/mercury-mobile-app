@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Mercury</title>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+
+    <body>
+        <h1>Mercury</h1>
+        <video id="local" autoplay playsinline></video>
+        <video id="remote" autoplay playsinline></video>
+        <div>
+            <button id="startButton" onclick="make_call()">Start</button>
+            <button id="callButton">Call</button>
+            <button id="hangupButton">Hang Up</button>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="socket.js"></script>
+        <script src="media.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+</html>
